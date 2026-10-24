@@ -8,7 +8,7 @@
 ## Last update Tue May 15 15:41:20 2007 Olivier Crouzet
 ##
 
-## Please use configure script
+## It's a template. Please use configure script
 
 
 INC	=%%%%

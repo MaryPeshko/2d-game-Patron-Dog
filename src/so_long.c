@@ -6,12 +6,16 @@
 /*   By: mpeshko <mpeshko@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 14:46:45 by mpeshko           #+#    #+#             */
-/*   Updated: 2024/06/07 18:17:16 by mpeshko          ###   ########.fr       */
+/*   Updated: 2026/10/24 18:03:32 by mpeshko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
+/**
+ * mlx_hook(...) registers keyboard and close events
+ * mlx_loop(data.mlx) starts the event loop
+ */
 int	main(int argc, char **argv)
 {
 	t_mlx	data;

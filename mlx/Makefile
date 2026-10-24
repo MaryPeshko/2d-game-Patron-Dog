@@ -8,15 +8,19 @@
 ## Last update Tue May 15 15:44:41 2007 Olivier Crouzet
 ##
 
-## Please use configure script
+## It's a wrapper entry point. Please use configure script
 
 
 all	: do_configure
 
+## 'configure' is a shell script that prepares the library for OS.
+##  Instead of a single static Makefile, it generates one based on your machine.
 do_configure	:
+	chmod +x ./configure
 	./configure
 
 clean	:
+	chmod +x ./configure
 	./configure clean
 
 re	: clean all

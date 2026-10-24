@@ -1,3 +1,8 @@
+# The script does a few important things:
+# finds the X11 include path, generates a real Makefile from the template in Makefile.mk,
+# builds the library and test program;
+# when called with clean, it runs the clean step on the generated makefiles
+
 #!/usr/bin/env sh
 
 set -e

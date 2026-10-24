@@ -6,12 +6,15 @@
 /*   By: mpeshko <mpeshko@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 15:50:29 by mpeshko           #+#    #+#             */
-/*   Updated: 2024/06/07 17:28:33 by mpeshko          ###   ########.fr       */
+/*   Updated: 2026/10/24 18:04:14 by mpeshko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
+/**
+ * mlx_xpm_file_to_image(...) loads sprite images
+ */
 t_img	add_img(t_mlx data, char *path)
 {
 	t_img	render_img;
@@ -40,6 +43,9 @@ int	load_img(t_mlx *mlx)
 	return (0);
 }
 
+/**
+ * mlx_put_image_to_window(...) draws images on the window
+ */
 void	mlx_render_img(t_mlx *mlx, t_img img, int x, int y)
 {
 	mlx_put_image_to_window(mlx->mlx, mlx->win, img.img, x, y);

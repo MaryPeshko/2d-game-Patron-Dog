@@ -6,12 +6,17 @@
 /*   By: mpeshko <mpeshko@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/01 00:02:17 by mpeshko           #+#    #+#             */
-/*   Updated: 2024/06/07 17:57:24 by mpeshko          ###   ########.fr       */
+/*   Updated: 2026/10/24 18:03:06 by mpeshko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
 
+
+/**
+ * mlx_init() connects to the display
+ * mlx_new_window(...) creates the game window
+ */
 void	init_libx(t_mlx *data)
 {
 	data->mlx = mlx_init();
