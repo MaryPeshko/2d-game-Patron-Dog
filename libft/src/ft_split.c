@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeshko <mpeshko@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: mpeshko <mpeshko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/21 18:23:23 by mpeshko           #+#    #+#             */
-/*   Updated: 2023/12/21 18:58:39 by mpeshko          ###   ########.fr       */
+/*   Updated: 2024/06/08 17:34:00 by mpeshko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,19 +93,3 @@ char	**ft_split(char const *s, char c)
 	array = split(s, c, array, words);
 	return (array);
 }
-/*int	main(void)
-{
-	char	*s;
-	char	c;
-	char	**kaas;
-
-	s = "      split       this for   me  !      ";
-	c = ' ';
-	kaas = ft_split(s, c);
-	printf("ft_split output: %s- \n", kaas[0]);
-	printf("ft_split output: %s- \n", kaas[1]);
-	printf("ft_split output: %s- \n", kaas[2]);
-	printf("ft_split output: %s- \n", kaas[3]);
-	printf("ft_split output: %s- \n", kaas[4]);
-	printf("ft_split output: %s- \n", kaas[5]);
-}*/

@@ -1,36 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mpeshko <mpeshko@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/12/20 21:20:22 by mpeshko           #+#    #+#             */
-/*   Updated: 2023/12/20 21:20:22 by mpeshko          ###   ########.fr       */
+/*   Created: 2025/01/22 15:34:16 by mpeshko           #+#    #+#             */
+/*   Updated: 2025/01/22 15:39:58 by mpeshko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isdigit(int c)
+// Copy the source string to the destination.
+char *ft_strcpy(char *dest, const char *src)
 {
-	if (c >= '0' && c <= '9')
-		return (2048);
-	else
-		return (0);
+	int	i;
+
+	i = 0;
+	while (src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return(dest);
 }
-/*int	main(void)
-{
-	char c;
-
-	c = 'A';
-	printf("\nWhen alphabetic character is passed: %d", ft_isdigit(c));
-
-	c = '!';
-	printf("\nWhen non-digit is passed: %d", ft_isdigit(c));
-
-	c = 0;
-	printf("\nWhen digit is passed: %d", ft_isdigit(c));
-	printf("\n");
-	return (0);
-}*/

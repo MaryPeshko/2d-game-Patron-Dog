@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeshko <mpeshko@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: mpeshko <mpeshko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 20:55:59 by mpeshko           #+#    #+#             */
-/*   Updated: 2023/12/20 21:47:32 by mpeshko          ###   ########.fr       */
+/*   Updated: 2024/06/08 17:27:27 by mpeshko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,3 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str[i] = '\0';
 	return (str);
 }
-/*int	main (void)
-{
-	char	str[] = "Hello, World!";
-	char	*substring = ft_substr(str, 7, 5);
-	printf("\nThe string:\n%s\nThe substring:\n%s\n\n", str, substring);
-
-	char	*empty_substring = ft_substr(NULL, 0, 10);
-	printf("\nThe string:\n%s\nThe empty_substring:\n%s\n\n", str,
-		empty_substring);
-	return (0);
-}*/

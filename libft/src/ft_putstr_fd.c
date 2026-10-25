@@ -3,15 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mpeshko <mpeshko@student.42berlin.de>      +#+  +:+       +#+        */
+/*   By: mpeshko <mpeshko@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/20 21:22:22 by mpeshko           #+#    #+#             */
-/*   Updated: 2023/12/21 21:35:08 by mpeshko          ###   ########.fr       */
+/*   Updated: 2024/06/08 17:33:06 by mpeshko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+// Output a string to a file descriptor.
 void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
@@ -23,13 +24,3 @@ void	ft_putstr_fd(char *s, int fd)
 		i++;
 	}
 }
-/*int	main(void)
-{
-	char	s[20] = "Program";
-	int		fd;
-
-	fd = 1;
-	ft_putstr_fd(s, fd);
-	write(1, "\n", 1);
-	return (0);
-}*/

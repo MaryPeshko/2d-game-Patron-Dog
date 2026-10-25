@@ -1,14 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: mpeshko <mpeshko@student.42berlin.de>      +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/05/27 15:32:51 by mpeshko           #+#    #+#              #
-#    Updated: 2026/10/24 19:20:12 by mpeshko          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
 
 NAME = 		so_long
 
@@ -76,7 +65,7 @@ obj/%.o: src/%.c $(HDRS)
 
 clean:
 	rm -rf obj/
-	rm -rf $(LIBFT)/*.o
+	rm -rf $(LIBFT)/obj
 	rm -rf ft_printf/sources/*.o
 	rm -rf $(MLX_PATH)obj
 
