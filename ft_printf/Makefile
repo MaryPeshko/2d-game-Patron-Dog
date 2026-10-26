@@ -1,28 +1,32 @@
-NAME	= libftprintf.a
+NAME = libftprintf.a
 
-SRCS	= ./sources/ft_printf.c \
-		./sources/ft_numbers.c \
-		./sources/ft_words.c \
-
-OBJS	= $(SRCS:.c=.o)
-
+SRCDIR = src
+INCDIR = include
+SRC =	$(addprefix $(SRCDIR)/, \
+		ft_printf.c ft_numbers.c ft_words.c \
+)
+OBJ = $(SRC:$(SRCDIR)/%.c=obj/%.o)
 CC	= cc
+RM	= rm -rf
+CFLAGS	= -Wall -Wextra -Werror -I$(INCDIR)
 
-RM	= rm -f
+all: $(NAME)
 
-CFLAGS	= -Wall -Wextra -Werror
+$(NAME): $(OBJ)
+	ar rcs $(NAME) $(OBJ)
 
-all:	$(NAME)
-
-$(NAME):	$(OBJS)
-			ar rcs $(NAME) $(OBJS)
+obj/%.o: $(SRCDIR)/%.c
+	@mkdir -p $(@D)
+	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
-			$(RM) $(OBJS)
+	@echo "Cleaning up obj files..."
+	$(RM) obj/
 
-fclean:		clean
-			$(RM) $(NAME)
+fclean: clean
+	@echo "Cleaning up obj and archive files..."
+	$(RM) $(NAME)
 
-re:			fclean all
+re: fclean all
 
-.PHONY:		all clean fclean re
+.PHONY: all clean fclean re

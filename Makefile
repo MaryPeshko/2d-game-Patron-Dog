@@ -1,25 +1,21 @@
 
 NAME = 		so_long
 
-SRC	 = 		src/so_long.c \
-			src/map_check.c \
-			src/map_check2.c \
-			src/minilibx.c \
-			src/img_tools.c \
-			src/print_error.c \
-			src/validate_path.c \
-			src/utils.c \
-			src/map.c \
-			src/ft_init_values.c \
-			src/hook.c \
-			src/hook_door.c
+SRCDIR = src
+SRC	 = 	$(addprefix $(SRCDIR)/, \
+		so_long.c map_check.c map_check2.c minilibx.c \
+		img_tools.c print_error.c validate_path.c utils.c \
+		map.c ft_init_values.c hook.c hook_door.c \
+)
+
 OBJ =		$(SRC:src/%.c=obj/%.o)
 HDRS = 		src/so_long.h
 
 LIBFT = 	libft
 LIB = 		$(LIBFT)/libft.a
 GNL := 		get_next_line/*c
-PRINTF = 	ft_printf/libftprintf.a
+PRINTF = 	ft_printf
+LIB_PRINTF = 	$(PRINTF)/libftprintf.a
 
 MLX_PATH = 	mlx/
 MLX_REPO = 	https://github.com/42Paris/minilibx-linux.git
@@ -54,8 +50,8 @@ $(MLX_LIB_A) $(MLX_LIB_UNAME):
 
 $(NAME): $(OBJ) $(MLX_LIBS)
 	@make -C $(LIBFT)
-	@make -C ft_printf/
-	$(CC) -g $(CFLAGS) $(OBJ) $(LIB) $(GNL) $(PRINTF) $(MLX_FLAGS) -o $(NAME)
+	@make -C $(PRINTF)
+	$(CC) -g $(CFLAGS) $(OBJ) $(LIB) $(GNL) $(LIB_PRINTF) $(MLX_FLAGS) -o $(NAME)
 
 obj/%.o: src/%.c $(HDRS)
 	@mkdir -p $(@D)
@@ -66,13 +62,13 @@ obj/%.o: src/%.c $(HDRS)
 clean:
 	rm -rf obj/
 	rm -rf $(LIBFT)/obj
-	rm -rf ft_printf/sources/*.o
+	rm -rf $(PRINTF)/obj
 	rm -rf $(MLX_PATH)obj
 
 fclean: clean
 	rm -f $(NAME)
-	rm -f $(LIBFT)/libft.a
-	rm -f ft_printf/libftprintf.a
+	rm -f $(LIB)
+	rm -f $(LIB_PRINTF)
 	rm -f $(MLX_LIB_A) $(MLX_LIB_UNAME)
 
 re: fclean all

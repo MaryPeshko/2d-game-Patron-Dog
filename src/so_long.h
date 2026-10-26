@@ -6,7 +6,7 @@
 /*   By: mpeshko <mpeshko@student.42berlin.de>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/27 14:44:48 by mpeshko           #+#    #+#             */
-/*   Updated: 2024/06/07 18:14:47 by mpeshko          ###   ########.fr       */
+/*   Updated: 2026/10/26 13:23:53 by mpeshko          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@
 # include "../libft/libft.h"
 # include "../mlx/mlx.h"
 # include "../get_next_line/get_next_line.h"
-# include "../ft_printf/includes/ft_printf.h"
+# include "../ft_printf/include/ft_printf.h"
 
 typedef struct t_img
 {

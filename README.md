@@ -1,4 +1,10 @@
-2D game **Patron Dog** written in C language
+## 2d game Patron Dog
+
+[Patron the Dog](https://en.wikipedia.org/wiki/Patron_(dog)) is a Jack Russell Terrier and the famous detection dog mascot of Ukraine’s State Emergency Service. In this top-down 2D game, you guide Patron through a minefield to detect every PMN landmine. Once all mines are found, the bowl is filled with food and the game is won.
+
+This project is written in C and built using custom C libraries, along with [MiniLibX library](#what-minilibx-is) for the graphical interface and gameplay rendering.
+
+![Patron Dog gameplay](assets/gameplay.jpg)
 
 ## To compile
 
@@ -70,3 +76,12 @@ MiniLibX is a very small C graphics library for Unix systems. It's as a simple X
 
 In other words: it creates a window, it handles events (keyboard, mouse, close), it lets you draw pixels or images and it runs an event loop.
 
+## Credits
+
+Special thanks to the author of the original dog sprite that inspired this project.
+
+Personal thanks to Oleksii Novokhatskyi: [GitHub](https://github.com/novokhatskyioleksii)
+
+You can also check the online game here: [Sniffer Dog Quest](https://sniffer-dog-quest.web.app/)
+
+Related project: [patron-deminer](https://github.com/marynakharchenko/patron-deminer)
